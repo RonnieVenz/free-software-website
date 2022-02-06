@@ -1,3 +1,5 @@
+This W.I.P. website is a project for Web and Mobile Development class @ EAN University in Bogotá, Colombia.
+
 # Your advice center for free software
 
 Feeling lost in the huge and underground world of free software? Looking for alternatives to main software? Maybe want to collaborate and make a name for yourself in the development world? You have come to the right place.
@@ -27,11 +29,3 @@ Here are the main news from all the sections above. Sources may include rss, soc
 ## Blog
 
 Here are the users thoughts on some things. I know, lame; but you may want to read this or share your thoughts. You know, for the community.
-
-This W.I.P. website is a project for Web and Mobile Development class @ EAN University in Bogotá, Colombia.
-
-
-
-
-
-
