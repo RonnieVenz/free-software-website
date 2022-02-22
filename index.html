@@ -10,25 +10,19 @@
 <body>
     <header>
         <div id="top-bar">
-            <button>Menu</button>
-            <p id="title">CyberCitizen</p>
-            <input type="search" name="Buscar" id="">
-        </div>
-        <div>
+            <p><strong><a href="/index.html" id="title">CyberCitizen</a></strong></p>
             <div id="nav-bar">
-                <nav><a href="#">News</a></nav>
                 <nav><a href="#">FOSS</a></nav>
-                <nav><a href="#">Apps</a></nav>
                 <nav><a href="#">Linux</a></nav>
                 <nav><a href="#">Windows</a></nav>
                 <nav><a href="#">Blog</a></nav>
             </div>
-            <div>
-                <input type="image" src="" alt="Telegram Channel">
+            <div id="media-bar">
+                <input type="image" src="" alt="Telegram">
                 <input type="image" src="" alt="Instagram">
                 <input type="image" src="" alt="Twitter">
-                <input type="image" src="" alt="Facebook page">
             </div>
+            <input type="search" name="Buscar" id="search-bar" placeholder="Buscar... ">
         </div>
     </header>
     <main>
@@ -37,10 +31,12 @@
         </h1> <hr>
         <article>
             <h2>
-                Título Llamativo
+                <a href="pages/article1.html">
+                    Ambientes de Escritorio
+                </a>
             </h2>
-            <p id="tag">Categoría</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat eligendi ad officia quas quibusdam modi, porro expedita asperiores animi quam enim unde similique praesentium deserunt quos... <a href="#">Leer Más</a></p>
+            <p id="tag">Linux</p>
+            <p>placeholder<a href="pages/article1.html">Leer Más</a></p>
             <p><img src="" alt="Comment"> - Autor - # Comentarios </p>
         </article>
         <h1>
@@ -53,11 +49,15 @@
         </article>
     </main>
     <footer>
-        <a href="#">Acerca de nosotros</a>
-        <a href="#">Contenido sobresaliente</a>
-        <a href="#">Hardware sobresaliente</a>
-        <P>Suscríbete a nuestro contenido:</P>
-        <input type="email" name="" id="" placeholder="tunombre@email.com">
+        <div>
+            <a href="#">Acerca de nosotros</a>
+            <a href="#">Contenido sobresaliente</a>
+            <a href="#">Hardware sobresaliente</a>
+        </div>
+        <div>
+            <P>Suscríbete a nuestro contenido:</P>
+            <input type="email" name="" id="" placeholder="tunombre@email.com">
+        </div>
     </footer>
 </body>
 </html>
