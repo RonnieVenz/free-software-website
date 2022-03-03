@@ -35,17 +35,14 @@ header {
     color: #ffffff;
 }
 
-#nav-bar {
+nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-#nav-bar nav {
     padding-top: 0.55rem;
 }
 
-#nav-bar a {
+nav a {
     padding: 0.5rem;
     color: #ffffff;
     text-decoration: none;
