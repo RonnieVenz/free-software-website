@@ -199,6 +199,9 @@ footer {
     flex-direction: row;
     justify-content: space-between;
 }
+footer .footer-logo-container {
+    margin-bottom: 1rem;
+}
 
 .social-links {
     font-size: 40px;
