@@ -85,3 +85,34 @@
 	  max-width: 20rem;
 	}
   }
+  @media (min-width: 1368px) {
+	  .wrapper {
+		  max-width: 1368px;
+		  margin: auto;
+	  }
+	  .recommended {
+		  max-width: 1368px;
+		  margin: auto;
+	  }
+	  .footer {
+		  max-width: 1368px;
+		  margin: auto;
+		  align-items: center;
+		  display: grid;
+		  grid-template-columns: 2fr 1fr 1fr;
+		  .info {
+			align-items: center;			  
+			grid-column: 1 / 2;
+		  }
+		  .links {
+			align-self: center;
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+		  }
+		  .contact {
+			align-items: center;
+			grid-column: 3 / 4;
+			grid-row: 1 / 2;
+		  }
+	  }
+  }
