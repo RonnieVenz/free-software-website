@@ -34,4 +34,4 @@ Definitivamente recomendaría Linux a cualquier persona, pero más especialmente
 
 ---
 
-¿Aún tienes curiosidad?
+¿Aún tienes curiosidad? Prueba nuestro curso de [Linux para Dummies]()
