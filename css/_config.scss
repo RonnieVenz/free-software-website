@@ -1,0 +1,37 @@
+* {
+	margin: 0px;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	&:visited {
+		color: #000;
+	}
+}
+aside {
+	z-index: 1;
+}
+.fa,
+.fas,
+.fa-solid,
+.far,
+.fa-regular,
+.fal,
+.fa-light,
+.fat,
+.fa-thin,
+.fad,
+.fa-duotone,
+.fab,
+.fa-brands {
+	color: #000;
+}
+@font-face {
+	font-family: OpenSans;
+	src: url(/res/fonts/OpenSans-VariableFont_wdth\,wght.ttf),
+        url(/res/fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
+}
+
+.logo-dark-mode {
+	display: none;
+}

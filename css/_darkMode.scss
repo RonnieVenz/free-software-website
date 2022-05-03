@@ -1,0 +1,116 @@
+// Toggle color schema
+$light-0: #f8f9fa;
+$light-1: #e9ecef;
+$light-2: #dee2e6;
+$dark-0: #495057;
+$dark-1: #343a40;
+$dark-2: #212529;
+$toggle-active-color: #00d1b6;
+// Inherit from main.scss
+$white: #ffffff;
+$black: #000000;
+$lighter-grey: #e6e6e6;
+$light-grey: #d6d6d6;
+$grey: #464646;
+$dark-grey: #181818;
+$darker-grey: #202020;
+$main-color: #002722;
+$active-color: #007c6c;
+
+.dark {
+    background-color: $dark-grey;
+    color: $white;
+    .footer-container {
+        background-color: $darker-grey;
+        color: $white;
+    }
+    .fa,
+    .fas,
+    .fa-solid,
+    .far,
+    .fa-regular,
+    .fal,
+    .fa-light,
+    .fat,
+    .fa-thin,
+    .fad,
+    .fa-duotone,
+    .fab,
+    .fa-brands {
+        color: $white;
+    }
+    a {
+        color: $white;
+        &:visited {
+            color: $white
+        }
+    }
+    .top-bar {
+        box-shadow: 5px 0 10px $dark-0;
+    }
+    .slides-card {
+        border-color: $black;
+        header {
+            background-color: $darker-grey;
+        }
+    }
+    .blog-entry {
+        border-color: $white;
+    }
+    .recommended-slides-card {
+        border-color: $black;
+    }
+    aside {
+        a {
+            color: $white;
+            &:visited {
+                color: $white;
+            }
+        }
+    }
+    .quote-container {
+        background-color: $grey;
+        .display {
+            background-color: #565656;
+        }
+    }
+}
+input {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip:rect(0 0 0 0);
+}
+label {
+    background-color: $light-1;
+    display: inline-block;
+    position: relative;
+    height: 30px;
+    margin: 4px;
+    width: 90px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 500ms ease;
+    &::after {
+            content: '';
+            display: block;
+            height: 27px;
+            width: 27px;
+            position: absolute;
+            top: 2px;
+            right: 60px;
+            border-radius: 50%;
+            background-color: $white;
+            transition: right 500ms ease, 
+              background-color 500ms ease;
+    }
+}
+#toggle-dark-mode:checked {
+    + label {
+        background: $toggle-active-color;
+        &::after {
+            right: 2px;
+        }
+    }
+}

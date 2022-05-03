@@ -1,5 +1,19 @@
+// Variables 
+
+$white: #ffffff;
+$black: #000000;
+$lighter-grey: #e6e6e6;
+$light-grey: #d6d6d6;
+$grey: #464646;
+$dark-grey: #181818;
+$darker-grey: #202020;
+$main-color: #002722;
+$active-color: #007c6c;
+$toggle-active-color: #00d1b6;
+
 @use 'config';
 @use 'responsive';
+@use 'darkMode';
 
 body {
 	margin: 0px;
@@ -8,7 +22,9 @@ body {
 a {
 	text-decoration: none;
 }
-.wrapper {
+.wrapper,
+.article-wrapper,
+.wiki-wrapper {
 	padding: 2rem;
 }
 section {
@@ -21,7 +37,7 @@ section {
 }
 .content-nav {
 	a {
-		color: #000;
+		color: $black;
 	}
 }
 .button {
@@ -29,13 +45,13 @@ section {
 	padding: 5px;
 	width: clamp(25px, 100px, 150px);
 	text-align: center;
-	border: 2px solid #007c6c;
+	border: 2px solid $active-color;
 	border-radius: 20px;
 }
 .button-active {
-	background-color: #007c6c;
+	background-color: $active-color;
 	a {
-		color: #fff;
+		color: $white;
 	}
 }
 .button-no-border {
@@ -47,6 +63,7 @@ section {
 	font-size: 24px;
 }
 .top-bar {
+	z-index: 2;
 	position: sticky;
 	top: 0;
 	display: flex;
@@ -54,11 +71,11 @@ section {
 	height: 4rem;
 	padding-left: 16px;
 	padding-right: 36px;
-	background-color: #002722;
+	background-color: $main-color;
 	align-items: center;
 	box-shadow: 5px 0 10px;
 	a {
-		color: #fff;
+		color: $white;
 	}
 }
 .site-logo {
@@ -74,7 +91,10 @@ section {
 }
 .bar-item {
 	&:hover {
-		background-color: #007c6c;
+		background-color: $active-color;
+	}
+	&:active {
+		background-color: $toggle-active-color;
 	}
 }
 .top-bar-left {
@@ -84,7 +104,8 @@ section {
 	float: right;
 }
 .mobile-header {
-	background-color: #002722;
+	z-index: 2;
+	background-color: $main-color;
 	position: sticky;
 	top: 0;
 }
@@ -93,13 +114,13 @@ section {
 	padding: 8px;
 }
 .mobile-nav-bar {
-	background-color: #000;
+	background-color: $black;
 	padding: 5px 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	a {
-		color: #fff;
+		color: $white;
 		&:hover {
 			color: yellow;
 		}
@@ -120,17 +141,30 @@ section {
 .slides-card {
 	margin: 1rem;
 	max-width: 90%;
-	border: 1px solid #fff;
+	border: 1px solid $white;
 	border-radius: 20px;
 	background-size: cover;
-	box-shadow: 5px 5px 10px #464646;
+	box-shadow: 5px 5px 10px $grey;
 	a {
-		color: #000;
+		color: $black;
 	}
 	header {
-		background-color: #e6e6e6;
+		background-color: $lighter-grey;
 		border-radius: 20px 20px 0 0;
 		padding: 1rem;
+	}
+}
+.carousel-recommended {
+	height: 25rem;
+	display: flex;
+	justify-content: center;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	& > div {
+		scroll-snap-align: start;
+		flex-shrink: 0;
+		width: 100%;
 	}
 }
 .recommended-slides-card {
@@ -139,8 +173,8 @@ section {
 	display: grid;
 	grid-template-rows: repeat(2, 1fr);
 	border-radius: 20px;
-	border: 1px solid #fff;
-	box-shadow: 5px 5px 10px #464646;
+	border: 1px solid $white;
+	box-shadow: 5px 5px 10px $grey;
 	max-width: 20rem;
 }
 .recommended-card-img {
@@ -156,13 +190,13 @@ section {
 	margin-top: 1rem;
 	padding: 1rem;
 	border-width: 0 0 0 2px;
-	border-color: #000 #000 #000 #000;
+	border-color: $black;
 	border-style: solid;
 }
 footer {
 	text-align: center;
 	padding: 2rem;
-	background-color: #d6d6d6;
+	background-color: #b6b6b6;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -172,9 +206,64 @@ footer {
 }
 .social-links {
 	font-size: 40px;
-	color: #000!important;
+	color: $black!important;
 }
 .adjust-center {
 	padding-top: 20px;
 	padding-bottom: 20px;
+}
+
+.quote-wrapper {
+	width: 60vw;
+	margin: auto auto 4rem auto;
+	padding-bottom: 2rem;
+}
+
+.quote-container {
+	width: 100%;
+	background-color: $white;
+	border-radius: 20px;
+	text-align: center;
+	box-shadow: 0 20px 65px $grey;
+	h1 {
+		color: $white;
+		margin-bottom: 30px;
+		background-color: $main-color;
+		font-size: larger;
+		padding: 15px ;
+	}
+	.display {
+		max-height: fit-content;
+		margin: auto 2rem 3rem 2rem;
+		box-shadow: 0 0 20px $grey;
+		border-radius: 20px;
+		padding: 1rem;
+	}
+	p {
+		line-height: 2;
+	}
+	h3 {
+		text-transform: capitalize;
+		margin: 2rem 0 2rem 0;
+		&::before {
+			content: "- ";
+		}
+	}
+	button {
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 25px;
+		color: $white;
+		cursor: pointer;
+		background-color: $main-color;
+		border: none;
+		padding: 15px 45px;
+		border-radius: 5px;
+		&:hover {
+			background-color: $active-color;
+		}
+		&:active {
+			background-color: $toggle-active-color;
+		}
+	}
 }
