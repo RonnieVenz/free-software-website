@@ -97,6 +97,12 @@ section {
 		background-color: $toggle-active-color;
 	}
 }
+.bar-item-active {
+	background-color: $active-color;
+	&:active {
+		background-color: $toggle-active-color;
+	}
+}
 .top-bar-left {
 	float: left;
 }
@@ -213,7 +219,7 @@ footer {
 	padding-bottom: 20px;
 }
 
-.quote-wrapper {
+.quote-wrapper.linux-wrapper {
 	width: 60vw;
 	margin: auto auto 4rem auto;
 	padding-bottom: 2rem;
@@ -249,6 +255,26 @@ footer {
 			content: "- ";
 		}
 	}
+	button {
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 25px;
+		color: $white;
+		cursor: pointer;
+		background-color: $main-color;
+		border: none;
+		padding: 15px 45px;
+		border-radius: 5px;
+		&:hover {
+			background-color: $active-color;
+		}
+		&:active {
+			background-color: $toggle-active-color;
+		}
+	}
+}
+.show-distro {
+
 	button {
 		font-size: 18px;
 		font-weight: 600;

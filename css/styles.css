@@ -32,7 +32,7 @@ aside {
 
 @font-face {
   font-family: OpenSans;
-  src: url(/res/fonts/OpenSans-VariableFont_wdth\,wght.ttf), url(/res/fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
+  src: url(../res/fonts/OpenSans-VariableFont_wdth\,wght.ttf), url(../res/fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
 }
 .logo-dark-mode {
   display: none;
@@ -359,6 +359,13 @@ section {
   background-color: #00d1b6;
 }
 
+.bar-item-active {
+  background-color: #007c6c;
+}
+.bar-item-active:active {
+  background-color: #00d1b6;
+}
+
 .top-bar-left {
   float: left;
 }
@@ -489,7 +496,7 @@ footer .footer-logo-container {
   padding-bottom: 20px;
 }
 
-.quote-wrapper {
+.quote-wrapper.linux-wrapper {
   width: 60vw;
   margin: auto auto 4rem auto;
   padding-bottom: 2rem;
@@ -541,6 +548,24 @@ footer .footer-logo-container {
   background-color: #007c6c;
 }
 .quote-container button:active {
+  background-color: #00d1b6;
+}
+
+.show-distro button {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #002722;
+  border: none;
+  padding: 15px 45px;
+  border-radius: 5px;
+}
+.show-distro button:hover {
+  background-color: #007c6c;
+}
+.show-distro button:active {
   background-color: #00d1b6;
 }
 

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../icons/css/all.css">
+    <link rel="shortcut icon" href="../res/favicon.ico" type="image/x-icon">
+    <title>Cytizen</title>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="../index.html" class="site-logo top-bar-item ">
+            <img src="../res/img/logo/Logo-Light.png" alt="">
+        </a>
+        <nav>
+            <a href="#" class="top-bar-item top-bar-right adjust-center bar-item">Blog</a>
+            <a href="#" class="top-bar-item top-bar-right adjust-center bar-item-active">Linux</a>
+            <a href="#" class="top-bar-item top-bar-right adjust-center bar-item">Apps</a>
+            <a href="#" class="top-bar-item top-bar-right adjust-center bar-item">Noticias</a>    
+        </nav>
+    </div>
+    <div class="mobile-header">
+        <div class="mobile-top-bar">
+                <a href="/index.html">
+                    <img src="/res/img/logo/Logo-Light.png" alt="" class="img-resize">
+                </a>
+        </div>
+        <div class="mobile-nav-bar">
+            <a href="">Noticias</a>
+            <a href="">Apps</a>
+            <a href="">Linux</a>
+            <a href="">Blog</a>
+        </div>
+    </div>
+    <div class="linux-wrapper">
+        <h1>
+            Lista de distros Linux
+        </h1> <hr><br>
+        <p>
+            Hay muchas distribuciones y mucho que aprender de ellas. Aquí una breve descripción de ellas. ¡Presiona el botón y ve qué sale!
+        </p> <br>
+        <div class="show-distro">
+            <h2 id="distro"> Distro
+            </h2>
+            <p>
+                Versión: <span id="version-distro">n</span>
+            </p>
+            <p>
+                Ambientes de escritorio: <span id="desktop-env">DE</span>
+            </p>
+            <p>
+                Gestor de paquetes: <span id="distro-pkg">something</span>
+            </p>
+            <p>
+                Descripción: <span id="distro-description">something something</span>
+            </p>
+            <button id="get-dist">Siguiente</button>
+        </div>
+    </div>
+    <footer class="footer-container">
+        <div class="footer">
+            <div class="info">
+                <div class="footer-logo-container">
+                    <a href="#" class="site-logo">
+                        <img src="../res/img/logo/Logo-Light.png" alt="" id="site-logo-image">
+                    </a>
+                </div>
+                <p>
+                    Cytizen es un portal web en el que las personas pueden encontrar noticias, guías, recomendaciones, artículos de opinión y wikis sobre software gratuito y libre. El objetivo es comunicar de la forma más clara posible el estado del software gratuito y libre para quien desee iniciarse en el medio, buscar alternativas al software tradicional y aprender sobre computación en general. 
+                </p>
+            </div>
+            <div class="links">
+                <nav>
+                    <a href="">Acerca de nosotros</a> <br>
+                    <a href="">Contenido Recomendado</a> <br>
+                    <a href="">Hardware</a> <br>
+                    <a href="">Guías Prácticas</a> <br>
+                </nav>
+            </div>
+            <div class="contact">
+                <h2>Contáctanos:</h2>
+                <div class="social-links" style="margin-bottom: 1rem;">
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-solid fa-at"></i>
+                    </a>
+                </div>
+                            <!--Switch para modo oscuro-->
+            <div style="display: flex; place-items: center; gap: 1rem;" class="dark-mode-switch">
+                <input type="checkbox" name="" id="toggle-dark-mode">
+                <label for="toggle-dark-mode"></label>
+                <p style="font-weight: bold;">Activar modo oscuro</p>
+            </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="./CytizenAPI.js"></script>
+</body>
+</html>
